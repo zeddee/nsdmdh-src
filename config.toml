@@ -1,4 +1,11 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "NSDMDH"
 theme = "hugo-xmin"
+
+footnotereturnlinkcontents = "↩"
+languageCode = "en-us"
+metaDataFormat = "yaml"
+
+[outputs]
+home = [ "HTML", "AMP"]

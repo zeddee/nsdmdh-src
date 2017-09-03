@@ -1,12 +1,35 @@
+$baseFontFamily: "Georgia, serif";
 $baseFontSize: 14px;
+$baseLineHeight: 1.618em;
+$baseGrey: #eee;
 
 html {
+  font-family:$baseFontFamily;
   font-size:$baseFontSize;
-  line-height:1.414em;
+  line-height:$baseLineHeight;
 }
 
 body {
   max-width:72.5rem;
+  width:90%;
   height:100vh;
   margin:0 auto;
+}
+
+.highlight {
+  overflow-x:scroll;
+  span,pre {
+    color:$baseGrey;
+  }
+  border:none;
+  padding:1rem;
+}
+
+.vimeo-wrapper {
+  iframe {
+    border:none;
+    min-width:100%;
+    .video-wrapper{
+    }
+  }
 }
