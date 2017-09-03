@@ -1,0 +1,12 @@
+$baseFontSize: 14px;
+
+html {
+  font-size:$baseFontSize;
+  line-height:1.414em;
+}
+
+body {
+  max-width:72.5rem;
+  height:100vh;
+  margin:0 auto;
+}
