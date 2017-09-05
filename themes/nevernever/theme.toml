@@ -1,0 +1,12 @@
+name = "nevernever"
+license = "MIT"
+licenselink = ""
+description = ""
+homepage = ""
+tags = ["minimal", "blog", "personal", "clean", "simple", "starter", "minimalist"]
+features = ["blog"]
+min_version = "0.1"
+
+[author]
+  name = "Zed"
+  homepage = ""

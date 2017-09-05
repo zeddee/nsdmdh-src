@@ -1,11 +1,11 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "NSDMDH"
-theme = "hugo-xmin"
+theme = "nevernever"
 
 footnotereturnlinkcontents = "↩"
-languageCode = "en-us"
 metaDataFormat = "yaml"
+sectionPagesMenu = "main"
 
 [outputs]
 home = [ "HTML", "AMP"]
