@@ -11,6 +11,7 @@ html {
   font-family:$baseFontFamily;
   font-size:$baseFontSize;
   line-height:$baseLineHeight;
+  min-width:800px;
 }
 
 body {
@@ -28,11 +29,17 @@ body {
       text-decoration:none;
       color:black;
     }
+    &:visited {
+      color:lighten($baseFontColor,10);
+    }
+  }
+  img {
+    max-width:100%;
   }
 }
 
 header {
-  &>h1.mainTitle{
+  & h1.mainTitle{
     font-family:'Oswald',$baseFontFamily;
     font-size:3rem;
     display:inline-block;
@@ -45,24 +52,72 @@ header {
       }
     }
   }
-  nav {
-  background:blue;
-  float:right;
-  display:block;
-  &:after,&:before {
-    content:"";
-    clear:both;
-  }
-  &>ul {
+}
+
+nav.menu {
+  //height:3rem;
+  & ul {
+    padding-left:0;
     list-style:none;
+    &:after,&:before {
+      content:"";
+      display:table;
+      clear:both;
+    }
     &>li {
+      //vertical-align:text-bottom;
+      //&:first-of-type{
+      //  float:left;
+      //}
+      //float:right;
+      margin-left:0.5em;
+      &:first-of-type{
+        margin-left:0;
+      }
       display:inline-block;
     }
   }
-  }
 }
 
+code {
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+  background: $baseGrey;
+  display:block;
+  overflow-x:scroll;
+  padding:0.5em;
+}
 
+.section-contents {
+  &>li>ul {
+    padding-left:0;
+    &>li{
+    list-style:none;
+    display:inline-block;
+    }
+    [class^="section-contents--"] {
+      padding:0.3em;
+      line-height:1.21em;
+      margin-bottom:0.1em;
+      &:last-of-type {
+        margin-bottom:0;
+      }
+    }
+    .section-contents--date {
+      background:lighten($baseGrey,5);
+      font-size:0.9rem;
+    }
+    .section-contents--section {
+      background:$baseGrey;
+      font-size:0.9rem;
+    }
+    .section-contents--item {
+      width:auto;
+    }
+  }
+}
 
 .highlight {
   overflow-x:scroll;

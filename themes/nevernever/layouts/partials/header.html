@@ -1,7 +1,8 @@
 <header>
-<h1 class="mainTitle"><a href="/">NSDMDH</a></h1>
-<nav>
+<nav class="menu">
   <ul>
+    <li><h1 class="mainTitle"><a href="/">NSDMDH</a></h1></li>
+    <ul>
     {{ $title := lower .Title }}
     {{ $section := lower .Section }}
     <li>
@@ -20,7 +21,7 @@
         <a href="{{ .URL }}">~/{{ lower .Name}}</a>
       </li>
     {{end}}
-
+    </ul>
   </ul>
 </nav>
 </header>

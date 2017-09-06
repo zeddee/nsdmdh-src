@@ -8,4 +8,4 @@ metaDataFormat = "yaml"
 sectionPagesMenu = "main"
 
 [outputs]
-home = [ "HTML", "AMP"]
+home = [ "HTML"]
