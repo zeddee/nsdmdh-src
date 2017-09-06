@@ -15,15 +15,13 @@ html {
 
 body {
   color:$baseFontColor;
-  max-width:70rem;
-  width:90%;
+  max-width:62.5rem;
+  width:73%;
   height:100vh;
   margin:0 auto;
   // default transitions
-  -webkit-transition: all 3s; /* Safari */
-  transition: all 3s;
-  -webkit-transition-delay:1s;
-  transition-delay:1s;
+  -webkit-transition: all 2s; /* Safari */
+  transition: all 2s;
   // all links
   a {
     &:hover {
@@ -47,17 +45,24 @@ header {
       }
     }
   }
-  .menu{
-    float:right;
-    &:after{
-      content:"";
-      clear:both;
-    }
-    &>ul>li{
+  nav {
+  background:blue;
+  float:right;
+  display:block;
+  &:after,&:before {
+    content:"";
+    clear:both;
+  }
+  &>ul {
+    list-style:none;
+    &>li {
       display:inline-block;
     }
   }
+  }
 }
+
+
 
 .highlight {
   overflow-x:scroll;

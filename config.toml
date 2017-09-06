@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "localhost"
 languageCode = "en-us"
 title = "NSDMDH"
 theme = "nevernever"
