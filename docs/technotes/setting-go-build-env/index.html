@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Setting the Go Build env | NSDMDH</title>
+    <link rel="stylesheet" href="/localhost/css/main.css" />
+    
+  </head>
+
+  <body>
+  <header>
+<nav class="menu">
+  <ul>
+    <li><h1 class="mainTitle"><a href="/">NSDMDH</a></h1></li>
+    <ul>
+    
+    
+    <li>
+      <a href="localhost">home/nsdmdh</a>
+    </li>
+    
+      
+      <li>
+        <a href="localhost/essays/">essays</a>
+      </li>
+    
+      
+      <li>
+        <a href="localhost/posts/">posts</a>
+      </li>
+    
+      
+      <li>
+        <a href="localhost/surfaceintervals/">surfaceintervals</a>
+      </li>
+    
+      
+      <li>
+        <a href="localhost/technotes/">technotes</a>
+      </li>
+    
+      
+      <li>
+        <a href="localhost/zedreads/">zedreads</a>
+      </li>
+    
+
+    
+    </ul>
+  </ul>
+</nav>
+</header>
+
+
+<div class="article-meta">
+<h1><span class="title">Setting the Go Build env</span></h1>
+
+
+</div>
+
+<main>
+<p>In relation to: <a href="https://classroom.udacity.com/courses/ud615/lessons/7826816435/concepts/81980819570923#">Scalable Microservices with Kubernetes — Building Containers with Docker: Creating the Image</a></p>
+
+<p>When building Go binaries for a Linux container in a non-Linux environment, you have to specify a Linux environment when running the build command.</p>
+
+<ol>
+<li><p>Run <code>env</code>. BSD command that (1) modifies the runtime environment and then (2) runs a specified utility. Syntax is usually <code>env &lt;ENVIRONMENT VARIABLES&gt; &lt;UTILITY TO RUN -PARAMETERS&gt;</code></p></li>
+
+<li><p>Specify environment in key=value pairs to match the container environment. In the case of Alpine Linux Docker images, specify the environment as <code>GOOS=linux GOARCH=386</code>.</p></li>
+
+<li><p>Run the &ldquo;go build&rdquo; utility. In this context, the environment is set such that the utility will build for a Linux i386 environment.</p></li>
+
+<li><p>Attach flags to build with static binaries.
+4.1. <code>--tags netgo</code> forces Go to build binaries with the Go network&rsquo;s library instead of the host&rsquo;s libraries.
+4.2. <code>--ldflags &quot;-extldflags '-lm -lstdc++ -static'&quot; passes &quot;-extldflags '…'&quot;</code> as arguments for every Go tool link invocation. Arguments are read as a space separated string.
+4.3. <code>-extldflags '-lm -lstdc++ -static'</code> builds the Go binary with static libraries. Libraries included are: lm, lstdc++, static(?).</p></li>
+</ol>
+
+<p>Complete command:</p>
+
+<pre><code>env GOOS=linux GOARCH=386 go build --tags netgo --ldflags &quot;-extldflags '-lm -lstdc++ -static'&quot;
+</code></pre>
+
+</main>
+
+  <footer>
+  never say doesn't mean don't have &copy; 2017 | <a href="mailto:zed@nsdmdh.com">zed@nsdmdh.com</a>
+  
+  </footer>
+  </body>
+</html>
+
