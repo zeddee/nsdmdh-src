@@ -17,12 +17,15 @@ body {
   /* Safari */
   transition: all 2s;
 }
+body a {
+  color: #0061ff;
+}
 body a:hover {
   text-decoration: none;
   color: black;
 }
 body a:visited {
-  color: #5e5e5e;
+  color: #003a99;
 }
 body img {
   max-width: 100%;
@@ -68,6 +71,18 @@ code {
   display: block;
   overflow-x: scroll;
   padding: 0.5em;
+}
+
+sup.footnote-ref {
+  line-height: 1em;
+  margin-left: 0.2em;
+}
+sup.footnote-ref a {
+  color: #e6b300;
+  font-weight: 700;
+}
+sup.footnote-ref a:hover {
+  color: #ffc700;
 }
 
 .section-contents > li > ul {

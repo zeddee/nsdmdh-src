@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://www.nsdmdh.com/posts/cashless/</loc>
+    <lastmod>2017-09-06T22:46:56+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.nsdmdh.com/posts/difficult/</loc>
     <lastmod>2017-09-06T12:07:14+08:00</lastmod>
   </url>
@@ -141,6 +146,12 @@
   </url>
   
   <url>
+    <loc>http://www.nsdmdh.com/tags/cashless/</loc>
+    <lastmod>2017-09-06T22:46:56+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.nsdmdh.com/categories/</loc>
     <lastmod>2016-01-16T03:58:34+00:00</lastmod>
     <priority>0</priority>
@@ -179,6 +190,12 @@
   <url>
     <loc>http://www.nsdmdh.com/tags/created-equal/</loc>
     <lastmod>2014-06-27T14:49:07+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nsdmdh.com/tags/cryptocurrencies/</loc>
+    <lastmod>2017-09-06T22:46:56+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -492,7 +509,13 @@
   
   <url>
     <loc>http://www.nsdmdh.com/posts/</loc>
-    <lastmod>2017-09-06T12:07:14+08:00</lastmod>
+    <lastmod>2017-09-06T22:46:56+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nsdmdh.com/categories/posts/</loc>
+    <lastmod>2017-09-06T22:46:56+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -657,7 +680,7 @@
   
   <url>
     <loc>http://www.nsdmdh.com/</loc>
-    <lastmod>2017-09-06T12:07:14+08:00</lastmod>
+    <lastmod>2017-09-06T22:46:56+08:00</lastmod>
   </url>
   
   <url>
