@@ -10,3 +10,6 @@ publishDir = "docs"
 
 [outputs]
 home = [ "HTML"]
+
+[params]
+  image_path="/img/colours/cyan.png"
