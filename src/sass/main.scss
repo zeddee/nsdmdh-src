@@ -4,6 +4,7 @@
 $baseFontFamily: 'Inconsolata', monospace;
 $baseFontSize: 14px;
 $baseFontColor: #444;
+$baseURLColor: #0061ff;
 $baseLineHeight: 1.618em;
 $baseGrey: #eee;
 
@@ -25,12 +26,13 @@ body {
   transition: all 2s;
   // all links
   a {
+    color:$baseURLColor;
     &:hover {
       text-decoration:none;
       color:black;
     }
     &:visited {
-      color:lighten($baseFontColor,10);
+      color:darken($baseURLColor,20);
     }
   }
   img {
@@ -90,7 +92,17 @@ code {
   padding:0.5em;
 }
 
+sup.footnote-ref{
+  line-height:1em;
+  margin-left:0.2em;
 
+  a {
+  $footnoteURLcolor:#ffc700;
+  color:darken($footnoteURLcolor,5);
+  &:hover{color:$footnoteURLcolor}
+  font-weight:700;
+  }
+}
 
 .section-contents {
   &>li>ul {
