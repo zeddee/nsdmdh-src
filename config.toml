@@ -1,7 +1,6 @@
-baseURL = "localhost"
+baseURL = "www.nsdmdh.com"
 languageCode = "en-us"
 title = "NSDMDH"
-theme = "nevernever"
 
 footnotereturnlinkcontents = "↩"
 metaDataFormat = "yaml"
