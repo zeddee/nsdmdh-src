@@ -7,5 +7,7 @@ footnotereturnlinkcontents = "↩"
 metaDataFormat = "yaml"
 sectionPagesMenu = "main"
 
+publishDir = "docs"
+
 [outputs]
 home = [ "HTML"]
