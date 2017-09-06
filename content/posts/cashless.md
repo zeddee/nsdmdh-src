@@ -4,7 +4,12 @@ date: 2017-09-06T22:46:56+08:00
 draft: false
 categories: [posts]
 tags: [cashless,cryptocurrencies]
+
+image_path: "/img/colours/yellow.png"
 ---
+![](/img/colours/yellow.png)
+
+
 
 I've been observing the wailing and gnashing of teeth over how we can never be a smart nation if we're behind in the adoption of cashless systems. Aside from the usual "you're going to get hacked by an NFC scanner" trains of thought, these points come to mind:
 
@@ -26,6 +31,7 @@ I've been observing the wailing and gnashing of teeth over how we can never be a
   - A useful metaphor: treat your mobile device like genitalia -- if you stick it into random receptacles/stick random things into it unprotected, it's going to catch something.
 - Payment via QR codes. Can I just express my horror at this idea? Scanning a random QR code that leads you to a payment portal is the equivalent of using a glory hole (please do not google; just bite the bullet and ask someone). Clicking on a dubious link in an email has already been established as an obvious no-no, so why are people excited about scanning QR codes which _do not indicate its contents in any way_? There are ways to secure this i.e. payment apps must restrict input accepted from scanning QR codes etc., but it still requires the user to be savvy (which is never likely, given imperfect knowledge and uneven hardware/software distribution).
 - Cryptocurrencies. This may be a viable route, given that (1) it's increasingly regulated, which means that it will become more viable as actual financial infrastructure, and (2) it allows for offline transactions to some extent (you still need to connect your wallet to the Internet to make and confirm a transaction). Estonia[^3], China[^4], and Russia[^5] are looking into digitising their currencies[^6]. But it is still a burgeoning technology, and comes with its own difficulties such as a relatively steep learning/adoption curve, and the regulatory desert it currently exists in.
+  - Cryptocurrenies are essentially _software_. This means that code must be written, and if there is code, then it can be split, copied, and hacked. The underlying technology has never been broken before, but peripheral software that allow cryptocurrency transactions have been.
 
 [^1]:"Growing demand for mobile payment services across Asia", _The Straits Times_, published 19 Mar 2017. Available: [http://www.straitstimes.com/asia/growing-demand-for-mobile-payment-services-across-asia](http://www.straitstimes.com/asia/growing-demand-for-mobile-payment-services-across-asia)
 [^2]:"Japan looks to double cashless payments in 10 years". _Nikkei Asian Review_, published 1 Jun 2017. Available: [https://asia.nikkei.com/Politics-Economy/Policy-Politics/Japan-looks-to-double-cashless-payments-in-10-years](https://asia.nikkei.com/Politics-Economy/Policy-Politics/Japan-looks-to-double-cashless-payments-in-10-years)
