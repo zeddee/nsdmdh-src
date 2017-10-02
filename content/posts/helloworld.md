@@ -133,6 +133,3 @@ example.com {
 
 
 {{< /highlight >}}
-
-[example ref]({{< ref "posts/linkeg.md" >}})
-[example relref]({{< relref "posts/linkeg.md#header2" >}})
