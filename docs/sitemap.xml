@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://www.nsdmdh.com/posts/sanjunipero/</loc>
-    <lastmod>2017-10-02T23:25:27+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://www.nsdmdh.com/posts/cashless/</loc>
     <lastmod>2017-09-06T22:46:56+08:00</lastmod>
   </url>
@@ -276,19 +271,13 @@
   </url>
   
   <url>
-    <loc>http://www.nsdmdh.com/tags/black-mirror/</loc>
-    <lastmod>2017-10-02T23:25:27+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.nsdmdh.com/tags/blind-cinema/</loc>
+    <loc>http://www.nsdmdh.com/categories/blind-cinema/</loc>
     <lastmod>2016-01-16T03:58:34+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.nsdmdh.com/categories/blind-cinema/</loc>
+    <loc>http://www.nsdmdh.com/tags/blind-cinema/</loc>
     <lastmod>2016-01-16T03:58:34+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -510,13 +499,13 @@
   </url>
   
   <url>
-    <loc>http://www.nsdmdh.com/tags/game-studies/</loc>
+    <loc>http://www.nsdmdh.com/categories/game-studies/</loc>
     <lastmod>2015-06-21T10:35:52+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.nsdmdh.com/categories/game-studies/</loc>
+    <loc>http://www.nsdmdh.com/tags/game-studies/</loc>
     <lastmod>2015-06-21T10:35:52+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -736,14 +725,14 @@
   </url>
   
   <url>
-    <loc>http://www.nsdmdh.com/tags/new-media/</loc>
-    <lastmod>2015-06-21T10:35:52+08:00</lastmod>
+    <loc>http://www.nsdmdh.com/categories/new-media/</loc>
+    <lastmod>2015-04-22T09:43:53+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.nsdmdh.com/categories/new-media/</loc>
-    <lastmod>2015-04-22T09:43:53+00:00</lastmod>
+    <loc>http://www.nsdmdh.com/tags/new-media/</loc>
+    <lastmod>2015-06-21T10:35:52+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -760,14 +749,14 @@
   </url>
   
   <url>
-    <loc>http://www.nsdmdh.com/tags/op-ed/</loc>
-    <lastmod>2014-06-27T14:49:07+00:00</lastmod>
+    <loc>http://www.nsdmdh.com/categories/op-ed/</loc>
+    <lastmod>2015-04-22T09:43:53+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.nsdmdh.com/categories/op-ed/</loc>
-    <lastmod>2015-04-22T09:43:53+00:00</lastmod>
+    <loc>http://www.nsdmdh.com/tags/op-ed/</loc>
+    <lastmod>2014-06-27T14:49:07+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -830,13 +819,13 @@
   </url>
   
   <url>
-    <loc>http://www.nsdmdh.com/tags/photography/</loc>
+    <loc>http://www.nsdmdh.com/categories/photography/</loc>
     <lastmod>2014-07-11T09:38:19+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.nsdmdh.com/categories/photography/</loc>
+    <loc>http://www.nsdmdh.com/tags/photography/</loc>
     <lastmod>2014-07-11T09:38:19+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -885,7 +874,7 @@
   
   <url>
     <loc>http://www.nsdmdh.com/posts/</loc>
-    <lastmod>2017-10-02T23:25:27+08:00</lastmod>
+    <lastmod>2017-09-06T22:46:56+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -904,12 +893,6 @@
   <url>
     <loc>http://www.nsdmdh.com/tags/queer/</loc>
     <lastmod>2014-07-10T07:16:20+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.nsdmdh.com/tags/rant/</loc>
-    <lastmod>2017-10-02T23:25:27+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -946,12 +929,6 @@
   <url>
     <loc>http://www.nsdmdh.com/tags/roguelike/</loc>
     <lastmod>2016-01-29T03:18:00+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.nsdmdh.com/tags/san-junipero/</loc>
-    <lastmod>2017-10-02T23:25:27+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1014,14 +991,14 @@
   </url>
   
   <url>
-    <loc>http://www.nsdmdh.com/tags/speak-simply/</loc>
-    <lastmod>2014-02-05T19:46:06+00:00</lastmod>
+    <loc>http://www.nsdmdh.com/categories/speak-simply/</loc>
+    <lastmod>2014-02-26T19:46:58+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.nsdmdh.com/categories/speak-simply/</loc>
-    <lastmod>2014-02-26T19:46:58+00:00</lastmod>
+    <loc>http://www.nsdmdh.com/tags/speak-simply/</loc>
+    <lastmod>2014-02-05T19:46:06+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1099,12 +1076,12 @@
   </url>
   
   <url>
-    <loc>http://www.nsdmdh.com/tags/technotes/</loc>
+    <loc>http://www.nsdmdh.com/categories/technotes/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.nsdmdh.com/categories/technotes/</loc>
+    <loc>http://www.nsdmdh.com/tags/technotes/</loc>
     <priority>0</priority>
   </url>
   
@@ -1139,13 +1116,13 @@
   </url>
   
   <url>
-    <loc>http://www.nsdmdh.com/tags/travel/</loc>
+    <loc>http://www.nsdmdh.com/categories/travel/</loc>
     <lastmod>2014-01-24T01:48:54+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.nsdmdh.com/categories/travel/</loc>
+    <loc>http://www.nsdmdh.com/tags/travel/</loc>
     <lastmod>2014-01-24T01:48:54+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -1159,12 +1136,6 @@
   <url>
     <loc>http://www.nsdmdh.com/tags/triund/</loc>
     <lastmod>2016-08-08T03:18:00+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.nsdmdh.com/tags/tv/</loc>
-    <lastmod>2017-10-02T23:25:27+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1229,20 +1200,20 @@
   </url>
   
   <url>
-    <loc>http://www.nsdmdh.com/tags/zedreads/</loc>
-    <lastmod>2014-04-15T19:41:43+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://www.nsdmdh.com/categories/zedreads/</loc>
     <lastmod>2016-02-03T18:22:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>http://www.nsdmdh.com/tags/zedreads/</loc>
+    <lastmod>2014-04-15T19:41:43+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.nsdmdh.com/</loc>
-    <lastmod>2017-10-02T23:25:27+08:00</lastmod>
+    <lastmod>2017-09-06T22:46:56+08:00</lastmod>
   </url>
   
   <url>
