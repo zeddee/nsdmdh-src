@@ -8,6 +8,12 @@ $baseURLColor: #0061ff;
 $baseLineHeight: 1.618em;
 $baseGrey: #eee;
 
+@mixin allTransitions($transitionTime){
+  // default transitions
+  -webkit-transition: all $transitionTime; /* Safari */
+  transition: all $transitionTime;
+}
+
 html {
   font-family:$baseFontFamily;
   font-size:$baseFontSize;
@@ -21,15 +27,13 @@ body {
   width:73%;
   height:100vh;
   margin:0 auto;
-  // default transitions
-  -webkit-transition: all 2s; /* Safari */
-  transition: all 2s;
   // all links
   a {
     color:$baseURLColor;
     &:hover {
       text-decoration:none;
       color:black;
+      @include allTransitions(2s);
     }
     &:visited {
       color:darken($baseURLColor,20);
