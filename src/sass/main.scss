@@ -86,15 +86,22 @@ nav.menu {
 }
 
 code {
+  border-radius: 0.3em;
+  -webkit-border-radius: 0.3em;
   white-space: pre;
   white-space: pre-wrap;
   white-space: -moz-pre-wrap;
   white-space: -o-pre-wrap;
   background: $baseGrey;
+  padding:0 0.3em;
+  pre>&{
   display:block;
   overflow-x:scroll;
   padding:0.5em;
+
+  }
 }
+
 
 sup.footnote-ref{
   line-height:1em;
