@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Zed Tan">
+    <title>Productive Macos: Lesson 1 | NSDMDH</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <meta property="og:title" content="Productive Macos: Lesson 1" />
+  <meta property="og:description" content="Productive macOS macOS is a powerful operating system that&rsquo;s usually reduced to being described as the shiny veneer that you&rsquo;re paying the Apple tax for. Yes, the Apple tax is real, and bits like root-gate don&rsquo;t make the shiny bits shinier. But the tax is not just for the shine; there is a solid a software and hardware ecosystem that&rsquo;s been tailored to work well together.
+This short series will teach you how to make better use of the non-shiny bits of your mac." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://www.nsdmdh.com/productivemacos/productive-macos-1/" />
+  
+    
+  
+  
+    <meta property="og:updated_time" content="2017-12-07T19:53:37&#43;08:00"/>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+        
+          
+            <meta property="article:tag" content="technical" />
+          
+            <meta property="article:tag" content="macos" />
+          
+            <meta property="article:tag" content="unix" />
+          
+            <meta property="article:tag" content="command" />
+          
+            <meta property="article:tag" content="terminal" />
+          
+            <meta property="article:tag" content="osx" />
+          
+        
+      
+
+  </head>
+
+  <body>
+  <header>
+<nav class="menu">
+  <ul>
+    <li><h1 class="mainTitle"><a href="/">NSDMDH</a></h1></li>
+    <ul>
+    
+    
+    <li>
+      <a href="http://www.nsdmdh.com">home/nsdmdh</a>
+    </li>
+    
+      
+      <li>
+        <a href="/essays/">essays</a>
+      </li>
+    
+      
+      <li>
+        <a href="/posts/">posts</a>
+      </li>
+    
+      
+      <li>
+        <a href="/productivemacos/">productivemacos</a>
+      </li>
+    
+      
+      <li>
+        <a href="/surfaceintervals/">surfaceintervals</a>
+      </li>
+    
+      
+      <li>
+        <a href="/technotes/">technotes</a>
+      </li>
+    
+      
+      <li>
+        <a href="/zedreads/">zedreads</a>
+      </li>
+    
+
+    
+    </ul>
+  </ul>
+</nav>
+</header>
+
+
+<div class="article-meta">
+<h1><span class="title">Productive Macos: Lesson 1</span></h1>
+
+<h2 class="date">2017/12/07</h2>
+</div>
+
+<main>
+
+
+<h1 id="productive-macos">Productive macOS</h1>
+
+<p>macOS is a powerful operating system that&rsquo;s usually reduced to being described as the shiny veneer that you&rsquo;re paying the Apple tax for. Yes, the Apple tax is real, and bits like <a href="https://9to5mac.com/2017/11/28/how-to-set-root-password/">root-gate</a> don&rsquo;t make the shiny bits shinier. But the tax is not just for the shine; there is a solid a software and hardware ecosystem that&rsquo;s been tailored to work well together.</p>
+
+<p>This short series will teach you how to make better use of the non-shiny bits of your mac. As long as it runs macOS, this series should cover it.</p>
+
+<h2 id="the-terminal">The terminal</h2>
+
+<p>The terminal is the macOS command-line. You type text into the application window, and your mac does something. Using the command-line when you have a GUI that you can use seems to rather miss the point. But I promise it&rsquo;s worth it.</p>
+
+<p>I use the terminal because:</p>
+
+<ol>
+<li><strong>There&rsquo;s less room for error.</strong> I can get away with horrendous things on the GUI. If I click on a button and it doesn&rsquo;t seem to respond, I click it again. The button might have run my request once, or twice. If I were making a payment, I&rsquo;d have to hope that whoever designed the payment button took into account that someone might accidentally click their button twice. In the command-line, you have to type exactly what you want, and run it.</li>
+<li><strong>Errors are obvious.</strong> If a command fails, the terminal tells me immediately. If the error message is specific enough (which it usually is), I know where to find my answers (i.e. Google).</li>
+<li><strong>If you can do it once, you can do it again. And again.</strong> Press the up arrow in the terminal to bring up the last command you ran. Press the up arrow again to bring up the command previous to that command, and so on. Need to make a change to 1500 different files? If you can do it for one file, you can write a script to run it on all 1500 files.</li>
+</ol>
+
+<h2 id="terminal-ground-rules">Terminal ground rules</h2>
+
+<ol>
+<li><strong>Run only commands that you understand.</strong> Make sure that you know what you&rsquo;re doing. If you don&rsquo;t, ask someone who does.</li>
+<li><strong>If something tells you to run a <code>sudo</code> command, make <em>doubly-sure</em> you know what you&rsquo;re doing.</strong> <code>sudo</code> commands allow access to system level things. Don&rsquo;t use it unless you really need to.</li>
+<li><strong>Not sure what a command does? Test it out first.</strong> Make an empty folder and run the commands. Run the commands on a test file. You&rsquo;ll get the hang of it.</li>
+<li><strong>Don&rsquo;t be afraid.</strong> Ask questions. If you mess up, there&rsquo;s likely a way to fix it. If a command fails, it likely wouldn&rsquo;t have changed anything.</li>
+</ol>
+
+<h2 id="lesson-1-figuring-out-where-you-are">Lesson 1: Figuring out where you are</h2>
+
+<p>Open the terminal at: Applications &gt; Utilities &gt; Terminal.app
+OR
+Open Spotlight (<code>Cmd+Space</code>) and type <code>terminal</code>. The terminal application should turn up. Hit <code>Enter</code> to launch it.</p>
+
+<p><img src="/img/productivemacos/spotlight-terminal.gif" alt="&quot;Open terminal with spotlight&quot;" /></p>
+
+<p>When the terminal loads, you&rsquo;ll be face-to-face with the command-line. You&rsquo;re now working in a <strong>shell</strong>.</p>
+
+<p>What&rsquo;s a shell? All you&rsquo;re seeing is a blank screen, some text, and a blinking cursor. The reason why a GUI is always more comfortable is that a GUI always shows you where you are. In a shell, that&rsquo;s not necessarily true, because it&rsquo;s more economical in presenting information to you. It shows you only the things related to the task at hand. But no worries. It&rsquo;s not hard to find out where you are.</p>
+
+<p>Get acquainted with the shell; run[^Type the command into the terminal and press <code>Enter</code>.] the following commands:</p>
+
+<ul>
+<li><code>whoami</code></li>
+<li><code>pwd</code></li>
+<li><code>ls -la</code></li>
+</ul>
+
+<p><code>whoami</code> prints your Unix user name. This is the user name that the underlying operating system uses to identify you. It may or may not be different from the user name that macOS displays on your mac. The difference doesn&rsquo;t matter; usually, only your Unix user name will be used when performing command-line related functions, not the user name displayed by macOS in System Preferences &gt; Users &amp; Groups.</p>
+
+<p><code>pwd</code> prints the current directory the shell is currently in. If you&rsquo;ve run it fresh from opening the terminal, it should print your user directory. It should look something like <code>/Users/&lt;user_name&gt;</code>.</p>
+
+<p><code>ls -la</code> lists the contents of the current directory. We&rsquo;re running the command with two options here, prefixed by a <code>-</code>. <code>-l</code> tells the shell to display the contents of the folder in a list. <code>-a</code> tells the shell to display all contents of the folder, including hidden files (like <code>.dot</code> files, or hidden files and folders that begin with a dot).</p>
+
+<p>See? Wasn&rsquo;t that hard.</p>
+
+<p>Now, run the following:</p>
+
+<ol>
+<li><code>mkdir i_made_this</code></li>
+<li><code>cd i_made_this</code></li>
+<li><code>pwd</code></li>
+</ol>
+
+<p>You&rsquo;ve done two things: made a new directory named &ldquo;i_made_this&rdquo;, and moved into it. To move into the previous working directory, run <code>cd ..</code>. Run the <code>pwd</code> command to figure out where you are.</p>
+
+<h2 id="i-made-this">I made this</h2>
+
+<p>Navigate into the <code>i_made_this</code> directory. Run <code>pwd</code> to make sure; you should be in a directory that looks like <code>/Users/&lt;user_name&gt;/i_made_this</code>.</p>
+
+<p>Now, run <code>touch touch_me.txt</code></p>
+
+<p>List the contents of the directory. You’ll see that there&rsquo;s now an empty text file named <code>touch_me.txt</code> in your current directory.</p>
+
+<h2 id="echo-and-narcissus">Echo and Narcissus</h2>
+
+<p>The <code>echo</code> command prints to the command line whatever you type after it.  Run <code>echo &quot;hello, you&quot;</code>. It should print &ldquo;hello, you&rdquo; to the shell. It seems kind of silly, but it’s useful (I promise). For now, we&rsquo;re just going to use it to quickly write something to a text file.</p>
+
+<p>Another command we&rsquo;re going to get familiar with is <code>cat</code>. It&rsquo;s not related to felines, but rather short for &ldquo;concatenate&rdquo;. It prints out the contents of all files passed to it. For now, run <code>cat touch_me.txt</code>. See anything? Good. <code>touch_me.txt</code> is an empty text file, so nothing should show up in the shell.</p>
+
+<blockquote>
+<p><strong>Tip</strong>: When typing a command, you can hit the <code>Tab</code> key to get the shell to try and autocomplete a command. For example, type <code>cat tou</code> and hit <code>Tab</code>. It should insert the file name <code>touch_me.txt</code> into the shell.</p>
+
+<p>If there is more than one possible autocompletion, the shell either lists all possible commands for you to choose from, or autocompletes it as best as it can. For example, if there are two files in the directory, one named <code>touch_me.txt</code> and another named <code>touch_me_two.txt</code>, autocomplete will complete your command as <code>cat touch_me</code> and leave you to fill in the rest. Hit <code>Tab</code> again to see a list of all files that would fit that prefix.</p>
+</blockquote>
+
+<p>Let&rsquo;s get to the meat of it. Run the following:</p>
+
+<ol>
+<li><code>echo &quot;something&quot; &gt;&gt; touch_me.txt</code></li>
+<li><code>cat touch_me.txt</code></li>
+</ol>
+
+<p>The shell should now print &ldquo;something&rdquo;.</p>
+
+<p>The double angled-brackets tell the shell to take the results of whatever the command on the left of it produces and append it to a file on the right side of it. Like this: <code>&lt;command&gt; &gt;&gt; &lt;file&gt;</code>.</p>
+
+<p>I use this to quickly write notes into a folder. For example, if I have a folder of images that I&rsquo;ve downloaded from a particular online article, I&rsquo;ll <code>cd</code> into the folder, and run <code>echo &quot;https://www.example.com/image-source-url&quot; &gt;&gt; source.txt</code>. Try it and see what happens.</p>
+
+<p>A single angled-bracket <code>&gt;</code> also writes text to files, but instead of appending the text, it <em>overwrites</em> the contents of the file with whatever is on the left of the angled-bracket. Try this on <code>touch_me.txt</code>:</p>
+
+<ol>
+<li><code>cat touch_me.txt</code></li>
+<li><code>echo &quot;line 2&quot; &gt;&gt; touch_me.txt</code></li>
+<li><code>cat touch_me.txt</code></li>
+<li><code>echo &quot;line 3&quot; &gt; touch_me.txt</code></li>
+<li><code>cat touch_me.txt</code></li>
+</ol>
+
+<p>Now let&rsquo;s try something a bit different. Copy the text below:</p>
+
+<pre><code>&lt;!-- http://slipsum.com/ --&gt;
+The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.
+</code></pre>
+
+<p>Use <code>echo</code> to insert it into a text file. Done? Easy?</p>
+
+<h2 id="move-it">Move it</h2>
+
+<p>We&rsquo;ll wrap up in a bit, but first we should clean up after ourselves. We should have a number of text files in the <code>i_made_this</code> folder. Let&rsquo;s say we want to move it all into a folder named <code>archive</code>.</p>
+
+<ol>
+<li><code>mkdir archive</code></li>
+<li><code>ls</code></li>
+<li>See all these files you have to move?</li>
+<li><code>mv *.txt archive</code></li>
+<li><code>ls</code></li>
+</ol>
+
+<p>You&rsquo;re done!</p>
+
+<h2 id="further-reading">Further reading</h2>
+
+<ul>
+<li>You can get help for most commands by running one of the following:
+
+<ul>
+<li><code>man &lt;command&gt;</code>, e.g. <code>man cat</code></li>
+<li>or you could try <code>&lt;command&gt; --help</code>. It doesn&rsquo;t work for all commands, and shell would usually tell you and provide you at least some syntax help anyway.</li>
+</ul></li>
+</ul>
+
+</main>
+
+  <footer>
+  never say doesn't mean don't have &copy; 2017 | <a href="mailto:zed@nsdmdh.com">zed@nsdmdh.com</a>
+  
+  </footer>
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-7775600-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-7775600-5');
+</script>
+
+  </body>
+</html>
+

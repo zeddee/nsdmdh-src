@@ -13,9 +13,6 @@ body {
   width: 73%;
   height: 100vh;
   margin: 0 auto;
-  -webkit-transition: all 2s;
-  /* Safari */
-  transition: all 2s;
 }
 body a {
   color: #0061ff;
@@ -23,6 +20,9 @@ body a {
 body a:hover {
   text-decoration: none;
   color: black;
+  -webkit-transition: all 2s;
+  /* Safari */
+  transition: all 2s;
 }
 body a:visited {
   color: #003a99;
@@ -63,11 +63,16 @@ nav.menu ul > li:first-of-type {
 }
 
 code {
+  border-radius: 0.3em;
+  -webkit-border-radius: 0.3em;
   white-space: pre;
   white-space: pre-wrap;
   white-space: -moz-pre-wrap;
   white-space: -o-pre-wrap;
   background: #eee;
+  padding: 0 0.3em;
+}
+pre > code {
   display: block;
   overflow-x: scroll;
   padding: 0.5em;
