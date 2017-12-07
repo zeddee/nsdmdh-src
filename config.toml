@@ -9,7 +9,9 @@ sectionPagesMenu = "main"
 publishDir = "docs"
 
 [outputs]
-home = [ "HTML"]
+home = ["HTML"]
 
 [params]
   image_path="/img/colours/cyan.png"
+[blackfriday]
+  fencedCode=true
