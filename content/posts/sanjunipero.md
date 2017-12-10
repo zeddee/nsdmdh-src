@@ -1,7 +1,6 @@
 ---
 title: "SAN JUNIPERO made me cry"
 date: 2017-12-10T17:50:27+08:00
-draft: true
 category: [posts]
 tags: [san junipero, black mirror, tv, rant]
 ---

@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://www.nsdmdh.com/posts/sanjunipero/</loc>
+    <lastmod>2017-12-10T17:50:27+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.nsdmdh.com/posts/crawlspace/</loc>
     <lastmod>2017-12-10T10:02:45+08:00</lastmod>
   </url>
@@ -272,6 +277,12 @@
   <url>
     <loc>http://www.nsdmdh.com/tags/bitcoin/</loc>
     <lastmod>2014-04-09T20:14:21+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nsdmdh.com/tags/black-mirror/</loc>
+    <lastmod>2017-12-10T17:50:27+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -879,7 +890,7 @@
   
   <url>
     <loc>http://www.nsdmdh.com/posts/</loc>
-    <lastmod>2017-12-10T10:02:45+08:00</lastmod>
+    <lastmod>2017-12-10T17:50:27+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -898,6 +909,12 @@
   <url>
     <loc>http://www.nsdmdh.com/tags/queer/</loc>
     <lastmod>2014-07-10T07:16:20+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nsdmdh.com/tags/rant/</loc>
+    <lastmod>2017-12-10T17:50:27+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -934,6 +951,12 @@
   <url>
     <loc>http://www.nsdmdh.com/tags/roguelike/</loc>
     <lastmod>2016-01-29T03:18:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nsdmdh.com/tags/san-junipero/</loc>
+    <lastmod>2017-12-10T17:50:27+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1145,6 +1168,12 @@
   </url>
   
   <url>
+    <loc>http://www.nsdmdh.com/tags/tv/</loc>
+    <lastmod>2017-12-10T17:50:27+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.nsdmdh.com/tags/user-experience/</loc>
     <lastmod>2015-01-24T17:54:06+08:00</lastmod>
     <priority>0</priority>
@@ -1218,7 +1247,7 @@
   
   <url>
     <loc>http://www.nsdmdh.com/</loc>
-    <lastmod>2017-12-10T10:02:45+08:00</lastmod>
+    <lastmod>2017-12-10T17:50:27+08:00</lastmod>
   </url>
   
   <url>
