@@ -1,7 +1,7 @@
 ---
 title: "Productive Macos: Lesson 1"
 date: 2017-12-07T19:53:37+08:00
-draft: false
+draft: true
 categories: [productive-macos]
 tags: [technical,macos,unix,command,terminal,osx]
 ---
