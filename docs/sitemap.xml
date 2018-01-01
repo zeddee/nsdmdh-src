@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://www.nsdmdh.com/posts/2018-01-01-changelog/</loc>
+    <lastmod>2018-01-01T09:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.nsdmdh.com/posts/sanjunipero/</loc>
     <lastmod>2017-12-10T17:50:27+08:00</lastmod>
   </url>
@@ -190,6 +195,18 @@
   <url>
     <loc>http://www.nsdmdh.com/essays/the-uneasy-heroism-of-taxi-driver/</loc>
     <lastmod>2012-12-18T21:30:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.nsdmdh.com/tags/2017/</loc>
+    <lastmod>2018-01-01T09:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nsdmdh.com/tags/2018/</loc>
+    <lastmod>2018-01-01T09:00:00+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -890,13 +907,13 @@
   
   <url>
     <loc>http://www.nsdmdh.com/posts/</loc>
-    <lastmod>2017-12-10T17:50:27+08:00</lastmod>
+    <lastmod>2018-01-01T09:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.nsdmdh.com/categories/posts/</loc>
-    <lastmod>2017-09-06T22:46:56+08:00</lastmod>
+    <lastmod>2018-01-01T09:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1076,7 +1093,7 @@
   
   <url>
     <loc>http://www.nsdmdh.com/tags/</loc>
-    <lastmod>2016-01-18T17:00:00+08:00</lastmod>
+    <lastmod>2018-01-01T09:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1247,7 +1264,7 @@
   
   <url>
     <loc>http://www.nsdmdh.com/</loc>
-    <lastmod>2017-12-10T17:50:27+08:00</lastmod>
+    <lastmod>2018-01-01T09:00:00+08:00</lastmod>
   </url>
   
   <url>
