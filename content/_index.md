@@ -2,4 +2,4 @@
 title: "home"
 ---
 
-zed rambles [here](/posts).
+zed rambles [here](/essays).
