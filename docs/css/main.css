@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata:400,700");
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+html {
+  font-family: "Inconsolata", monospace;
+  font-size: 14px;
+  line-height: 1.618em;
+  min-width: 800px;
+}
+
+body {
+  color: #444;
+  max-width: 62.5rem;
+  width: 73%;
+  height: 100vh;
+  margin: 0 auto;
+}
+body a {
+  color: #0061ff;
+}
+body a:hover {
+  text-decoration: none;
+  color: black;
+  -webkit-transition: all 2s;
+  /* Safari */
+  transition: all 2s;
+}
+body a:visited {
+  color: #003a99;
+}
+body img {
+  max-width: 100%;
+}
+
+header h1.mainTitle {
+  font-family: "Oswald", "Inconsolata", monospace;
+  font-size: 3rem;
+  display: inline-block;
+}
+header h1.mainTitle a {
+  color: inherit;
+  text-decoration: none;
+}
+header h1.mainTitle a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav.menu ul {
+  padding-left: 0;
+  list-style: none;
+}
+nav.menu ul:after, nav.menu ul:before {
+  content: "";
+  display: table;
+  clear: both;
+}
+nav.menu ul > li {
+  margin-left: 0.5em;
+  display: inline-block;
+}
+nav.menu ul > li:first-of-type {
+  margin-left: 0;
+}
+
+code {
+  border-radius: 0.3em;
+  -webkit-border-radius: 0.3em;
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+  background: #eee;
+  padding: 0 0.3em;
+}
+pre > code {
+  display: block;
+  overflow-x: scroll;
+  padding: 0.5em;
+}
+
+sup.footnote-ref {
+  line-height: 1em;
+  margin-left: 0.2em;
+}
+sup.footnote-ref a {
+  color: #e6b300;
+  font-weight: 700;
+}
+sup.footnote-ref a:hover {
+  color: #ffc700;
+}
+
+.section-contents > li > ul {
+  padding-left: 0;
+}
+.section-contents > li > ul > li {
+  list-style: none;
+  display: inline-block;
+}
+.section-contents > li > ul [class^="section-contents--"] {
+  padding: 0.3em;
+  line-height: 1.21em;
+  margin-bottom: 0.1em;
+}
+.section-contents > li > ul [class^="section-contents--"]:last-of-type {
+  margin-bottom: 0;
+}
+.section-contents > li > ul .section-contents--date {
+  background: #fbfbfb;
+  font-size: 0.9rem;
+}
+.section-contents > li > ul .section-contents--section {
+  background: #eee;
+  font-size: 0.9rem;
+}
+.section-contents > li > ul .section-contents--item {
+  width: auto;
+}
+
+.highlight {
+  overflow-x: scroll;
+  border: none;
+  padding: 1rem;
+}
+.highlight span, .highlight pre {
+  color: #eee;
+}
+
+.vimeo-wrapper iframe {
+  border: none;
+  min-width: 100%;
+}
+
+/*# sourceMappingURL=main.css.map */
