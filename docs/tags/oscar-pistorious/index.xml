@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Oscar Pistorious on NSDMDH</title>
+    <link>http://www.nsdmdh.com/tags/oscar-pistorious/</link>
+    <description>Recent content in Oscar Pistorious on NSDMDH</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Apr 2014 20:14:21 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.nsdmdh.com/tags/oscar-pistorious/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Zed Reads 001</title>
+      <link>http://www.nsdmdh.com/zedreads/zed-reads-001/</link>
+      <pubDate>Wed, 09 Apr 2014 20:14:21 +0000</pubDate>
+      
+      <guid>http://www.nsdmdh.com/zedreads/zed-reads-001/</guid>
+      <description>This is an attempt to catalogue and journal most of what I&amp;rsquo;m trying to read. It is an exercise in articulation, and (hopefully) quick writing and quick reading.
+Tech Bitcoin — The Internet of Money | Startup Boy Great primer on what the Bitcoin is. It comes down to this: the Bitcoin is the digital equivalent of a physical coin. It&amp;rsquo;s mined by time and computing labour, and each coin is unique because built into every digital wallet is a database of sorts that tracks every single transaction, making sure that no bit coin can be spent twice over.</description>
+    </item>
+    
+  </channel>
+</rss>
