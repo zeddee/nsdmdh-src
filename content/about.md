@@ -17,8 +17,8 @@ Zed is a former educator. He now manages and writes technical content at a softw
 
 - Ground Labs Documentation. [https://docs.groundlabs.com/](https://docs.groundlabs.com/)
 - "What _Time_ Got Wrong About _The Last of Us_", _Kill Screen_, published 8 Oct 2014, available: [https://killscreen.com/articles/what-time-got-wrong-about-last-us/](https://killscreen.com/articles/what-time-got-wrong-about-last-us/)
-- More writing at [nsdmdh.com](nsdmdh.com)
-
+- More writing at [nsdmdh.com](nsdmdh.com)
+- Random code bits at [github.com/zeddee](https://github.com/zeddee)
 
 ## Experience
 
