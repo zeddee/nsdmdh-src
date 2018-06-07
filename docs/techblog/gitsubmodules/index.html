@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Zed Tan">
+    <title>Git Submodules | NSDMDH</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <meta property="og:title" content="Git Submodules" />
+  <meta property="og:description" content="Table of Contents Starting off What are they good for? Codebase isolation Codebase stability Sane Git histories Sane codebase mental models   Working with submodules Configure Git Submodule Visibility Update Submodule Submodule Metadata Submodule Refs   Further Reading   Here be dragons
+   In Chuck Palahniuk&#8217;s words, &#34;You must jump into disaster with both feet.&#34; Git submodules are generally avoided because:
+  They tend to be poorly understood, and" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://www.nsdmdh.com/techblog/gitsubmodules/" />
+  
+    
+  
+  
+    <meta property="og:updated_time" content="2018-06-07T20:57:09&#43;08:00"/>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+        
+      
+
+  </head>
+
+  <body>
+  <header>
+<nav class="menu">
+  <ul>
+    <li><h1 class="mainTitle"><a href="/">NSDMDH</a></h1></li>
+    <ul>
+    
+    
+    <li>
+      <a href="http://www.nsdmdh.com">home/nsdmdh</a>
+    </li>
+    
+      
+      <li>
+        <a href="/about/">about zed</a>
+      </li>
+    
+      
+      <li>
+        <a href="/essays/">essays</a>
+      </li>
+    
+      
+      <li>
+        <a href="/techblog/">techblogs</a>
+      </li>
+    
+      
+      <li>
+        <a href="/zedreads/">zedreads</a>
+      </li>
+    
+
+    
+    </ul>
+  </ul>
+</nav>
+</header>
+
+
+<div class="article-meta">
+<h1><span class="title">Git Submodules</span></h1>
+
+<h2 class="date">2018/06/07</h2>
+</div>
+
+<main>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_starting_off">Starting off</a></li>
+<li><a href="#_what_are_they_good_for">What are they good for?</a>
+<ul class="sectlevel2">
+<li><a href="#_codebase_isolation">Codebase isolation</a></li>
+<li><a href="#_codebase_stability">Codebase stability</a></li>
+<li><a href="#_sane_git_histories">Sane Git histories</a></li>
+<li><a href="#_sane_codebase_mental_models">Sane codebase mental models</a></li>
+</ul>
+</li>
+<li><a href="#_working_with_submodules">Working with submodules</a>
+<ul class="sectlevel2">
+<li><a href="#_configure_git_submodule_visibility">Configure Git Submodule Visibility</a></li>
+<li><a href="#_update_submodule">Update Submodule</a></li>
+<li><a href="#_submodule_metadata">Submodule Metadata</a></li>
+<li><a href="#_submodule_refs">Submodule Refs</a></li>
+</ul>
+</li>
+<li><a href="#_further_reading">Further Reading</a></li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Here be dragons</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>In Chuck Palahniuk&#8217;s words, "You must jump into disaster with both feet." Git submodules are generally avoided because:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>They tend to be poorly understood, and</p>
+</li>
+<li>
+<p>It&#8217;s hard to keep track one repository, let alone several that have to sync into one master project.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>But here we are.</p>
+</div>
+<div class="paragraph">
+<p>This is a quick overview on what Git submodules are, and how they&#8217;re useful for keeping your code manageable.</p>
+</div>
+<div class="sect1">
+<h2 id="_starting_off">Starting off</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Let&#8217;s say we have a parent repository named <code>docsource-master</code>, and that contains 3 submodules:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>repo_1</code></p>
+</li>
+<li>
+<p><code>repo_2</code></p>
+</li>
+<li>
+<p><code>repo_3</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_are_they_good_for">What are they good for?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Git submodules are used to break up large monolithic projects into smaller code-bases. This sounds great in theory — modular environments! — until you realise that juggling four repositories as opposed to managing one large one is a terrible idea.</p>
+</div>
+<div class="paragraph">
+<p>If you can manage everything in one repository, you should never use a Git submodule to plug code into your code base. If in doubt, there are other tools that may do what you want (see Git tree).</p>
+</div>
+<div class="paragraph">
+<p>Why submodules then? They have a few specific uses:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Codebase isolation</p>
+</li>
+<li>
+<p>Codebase stability</p>
+</li>
+<li>
+<p>Sane Git histories</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_codebase_isolation">Codebase isolation</h3>
+<div class="paragraph">
+<p>Git submodules allow you to plug other repositories into a parent repository while keeping both codebases isolated (technically, they live in the same <code>.git</code> folder as the parent repository, but let&#8217;s not go there yet).</p>
+</div>
+<div class="paragraph">
+<p>A submodule doesn&#8217;t add its commit history to the master project. Instead, it maintains its own commit history. The parent repository only records a given commit hash from its children submodules.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>For <code>docsource-master</code> <code>master</code> HEAD (<code>4086d4082355feab4172ce712cee4a17</code>), I&#8217;ve committed <code>repo_1</code> <code>master</code> HEAD (<code>0d06f18f0969ac55b9dcd937b6700fe1</code>).</p>
+</li>
+<li>
+<p>I make another commit to <code>docsource-master</code> <code>master</code>, bringing HEAD to <code>e9c2c7d86b0aa196dcf3838db1362d83</code>.</p>
+</li>
+<li>
+<p>I make another commit to <code>repo_1</code> <code>master</code>, bringing HEAD to <code>623faff40237f976aa153792585531d0</code>.</p>
+</li>
+<li>
+<p><code>docsource-master</code> doesn&#8217;t change its reference to <code>repo_1</code> — it still remains at <code>0d06f18f0969ac55b9dcd937b6700fe1</code>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>This means that <code>repo_1</code> is never updated on <code>docsource-master</code> unless I commit the new hash of <code>repo_1</code> <code>master</code> HEAD, which is currently <code>623faff40237f976aa153792585531d0</code>.
+We then know that we can make commits to <code>repo_1</code> without having to worry about breaking anything in <code>docsource-master</code> <code>master</code>, and vice-versa.</p>
+</div>
+<div class="paragraph">
+<p>This becomes important when maintaining stable builds that require resources from multiple independent repositories, as is the case with <code>docsource-master</code>.</p>
+</div>
+<div class="paragraph">
+<p>With an effective submodule system in place, we know that the relationship between the parent repository and children repository is always stable.</p>
+</div>
+<div class="paragraph">
+<p>Which brings us to the next benefit:</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_codebase_stability">Codebase stability</h3>
+<div class="paragraph">
+<p>Having a modular codebase means that writers can effectively isolate their work from other collaborators, so that no one blocks anyone else&#8217;s work.</p>
+</div>
+<div class="paragraph">
+<p>We need to produce three sets of documentation for three different products. Because some features and documentation needs overlap, resources should be shared between the three sets of docs to keep information and assets single-sourced.</p>
+</div>
+<div class="paragraph">
+<p>Storytime:</p>
+</div>
+<div class="paragraph">
+<p><code>docsource-master</code> started out as a single monolithic repository for ER, CR, and DR docs. We split out the projects for easier content distribution, and had <code>rsync</code> synchronise resources between the projects. As long as work was done in branches, we were able to isolate work enough to prevent merge conflicts and a scattered history. But at some point, the side navigation stopped working — none of the projects were able to render the side navigation in the HTML output.</p>
+</div>
+<div class="paragraph">
+<p>This resulted in two weeks spent trying to trace the commit that broke it — because we were still building the site, I may have made a change that broke it but didn&#8217;t realise it until more changes have been merged to the <code>master</code> branch. We never found the commit — because we didn&#8217;t break the side navigation. It was an update to Flare 2017r2 that broke the layout.</p>
+</div>
+<div class="paragraph">
+<p>But we weren&#8217;t able to rule out changes to the layout as a probable cause for the breakage, which led to two weeks of pointless troubleshooting and much gnashing of teeth.</p>
+</div>
+<div class="paragraph">
+<p>Splitting out the projects into individual repositories makes sure that this never happens again. Any change to shared resources is tightly versioned and controlled from the <code>docsource-master</code> project. Anything breakage on an individual project is isolated to that project itself. If the problem is found on all projects, then it&#8217;s either a toolchain issue, or a shared resource issue. Troubleshooting becomes a lot more straightforward, and the project becomes a lot more stable.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sane_git_histories">Sane Git histories</h3>
+<div class="paragraph">
+<p>Splitting the repositories makes the project histories more readable.</p>
+</div>
+<div class="paragraph">
+<p>Instead of having to track a specific change to a minute component on a sprawling monolithic repository, we can search each project&#8217;s history easily because it exists in its own repository.</p>
+</div>
+<div class="paragraph">
+<p>By splitting the repos the way we have, we know that all commits to shared resources and build notes can be found in <code>docsource-master</code>, and notes on individual issues can be found in the project submodules themselves. Specific commit notes become easier to find and read, instead of having to wade through notes from other projects.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sane_codebase_mental_models">Sane codebase mental models</h3>
+<div class="paragraph">
+<p>They say that if you can&#8217;t keep a mental model of your codebase in your head, then it&#8217;s too complicated.</p>
+</div>
+<div class="paragraph">
+<p>Splitting the <code>docsource-master</code> project into submodules makes managing Flare&#8217;s complex directory strutures more manageable, and easier to cache in meat-RAM.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_working_with_submodules">Working with submodules</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_configure_git_submodule_visibility">Configure Git Submodule Visibility</h3>
+<div class="paragraph">
+<p>Before attempting anything, set up Git to be more submodule friendly:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash"># include a submodule status summary when you run 'git status'.
+git config --global status.submoduleSummary true
+
+# improve 'git diff' for submodules.
+git config --global diff.submodule log
+
+# makes sure that 'git fetch' will always grab submodule refs.
+git config --global fetch.recurseSubmodules on-demand</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Add Submodule to Container Repo</p>
+</div>
+<div class="paragraph">
+<p>To add a submodule to the <code>docsource</code> repository:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">git submodule add -b master &lt;repository-remote-url&gt;
+# we only want to sync the master branch of each submodule to the docsource repo</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_update_submodule">Update Submodule</h3>
+<div class="paragraph">
+<p>Submodules have to be updated individually. Do this by running in the parent repository root:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">git pull &amp;&amp; git submodule for each "git checkout master &amp;&amp; git pull"</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_submodule_metadata">Submodule Metadata</h3>
+<div class="paragraph">
+<p>When you initialize a submodule in <code>docsource</code>, git will create a <code>.gitmodules</code> file that will contain config re: submodules. It will look like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-linenums" data-lang="linenums">[submodule "cr-core"]
+  path = cr-core
+  url = ssh://repo-man.internal.groundlabs.com:7999/doc/cr-core.git
+  branch = master</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In addition, git will add an entry to your <code>.git/config</code> file. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-linenums" data-lang="linenums">[core]
+  repositoryformatversion = 0
+  filemode = false
+  bare = false
+  logallrefupdates = true
+  symlinks = false
+  ignorecase = true
+[remote "origin"]
+  url = ssh://git@repo-man.internal.groundlabs.com:7999/doc/docsource-master.git
+  fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+  remote = origin
+  merge = refs/heads/master
+[branch "develop"]
+  remote = origin
+  merge = refs/heads/develop
+[submodule "cr-core"]
+  url = ssh://repo-man.internal.groundlabs.com:7999/doc/cr-core.git</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_submodule_refs">Submodule Refs</h3>
+<div class="paragraph">
+<p>In <code>Git 1.7.8\^</code>, all submodule refs are stored in <code>.git/modules</code>. If a submodule were to be removed in a branch, it would persist in <code>.git/modules</code>, allowing the container repository to keep track of the submodule outside of the working directory.</p>
+</div>
+<div class="paragraph">
+<p>This means that to remove a submodule, in addition to removing its entries in <code>.gitmodules</code> and <code>.git/config</code>, you have to remove the refs in <code>.git/modules</code>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_further_reading">Further Reading</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Most of this readme is derived from this fantastic article: Christophe Porteneuve, "Mastering Git submodules," published 9 Jan 2015. Available: <a href="https://medium.com/@porteneuve/mastering-git-submodules-34c65e940407" class="bare">https://medium.com/@porteneuve/mastering-git-submodules-34c65e940407</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://git-scm.com/docs/git-submodule" class="bare">https://git-scm.com/docs/git-submodule</a></p>
+</li>
+<li>
+<p><a href="https://chrisjean.com/git-submodules-adding-using-removing-and-updating/" class="bare">https://chrisjean.com/git-submodules-adding-using-removing-and-updating/</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+</main>
+
+  <footer>
+  never say doesn't mean don't have &copy; 2018 | <a href="mailto:zed@nsdmdh.com">zed@nsdmdh.com</a>
+
+  
+  </footer>
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-7775600-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-7775600-5');
+</script>
+
+  </body>
+</html>
+

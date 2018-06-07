@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://www.nsdmdh.com/techblog/gitsubmodules/</loc>
+    <lastmod>2018-06-07T20:57:09+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.nsdmdh.com/zedreads/levinas-suffering-and-death/</loc>
     <lastmod>2016-02-03T18:22:00+08:00</lastmod>
   </url>
@@ -525,6 +530,12 @@
   </url>
   
   <url>
+    <loc>http://www.nsdmdh.com/techblog/</loc>
+    <lastmod>2018-06-07T20:57:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.nsdmdh.com/tags/thailand-cinema/</loc>
     <lastmod>2014-04-03T21:14:59+00:00</lastmod>
     <priority>0</priority>
@@ -568,7 +579,7 @@
   
   <url>
     <loc>http://www.nsdmdh.com/</loc>
-    <lastmod>2016-02-03T18:22:00+08:00</lastmod>
+    <lastmod>2018-06-07T20:57:09+08:00</lastmod>
   </url>
   
   <url>
