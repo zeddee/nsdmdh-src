@@ -1,0 +1,177 @@
+---
+title: "Git Submodules"
+date: 2018-06-07T20:57:09+08:00
+---
+:toc:
+:source-highligher: coderay
+
+****
+Here be dragons
+****
+
+In Chuck Palahniuk's words, "You must jump into disaster with both feet." Git submodules are generally avoided because:
+
+1. They tend to be poorly understood, and
+2. It's hard to keep track one repository, let alone several that have to sync into one master project.
+
+But here we are.
+
+This is a quick overview on what Git submodules are, and how they're useful for keeping your code manageable.
+
+== Starting off
+
+Let's say we have a parent repository named `docsource-master`, and that contains 3 submodules:
+
+- `repo_1`
+- `repo_2`
+- `repo_3`
+
+== What are they good for?
+
+Git submodules are used to break up large monolithic projects into smaller code-bases. This sounds great in theory — modular environments! — until you realise that juggling four repositories as opposed to managing one large one is a terrible idea.
+
+If you can manage everything in one repository, you should never use a Git submodule to plug code into your code base. If in doubt, there are other tools that may do what you want (see Git tree).
+
+Why submodules then? They have a few specific uses:
+
+- Codebase isolation
+- Codebase stability
+- Sane Git histories
+
+=== Codebase isolation
+
+Git submodules allow you to plug other repositories into a parent repository while keeping both codebases isolated (technically, they live in the same `.git` folder as the parent repository, but let's not go there yet).
+
+A submodule doesn't add its commit history to the master project. Instead, it maintains its own commit history. The parent repository only records a given commit hash from its children submodules.
+
+Example:
+
+1. For `docsource-master` `master` HEAD (`4086d4082355feab4172ce712cee4a17`), I've committed `repo_1` `master` HEAD (`0d06f18f0969ac55b9dcd937b6700fe1`).
+2. I make another commit to `docsource-master` `master`, bringing HEAD to `e9c2c7d86b0aa196dcf3838db1362d83`.
+3. I make another commit to `repo_1` `master`, bringing HEAD to `623faff40237f976aa153792585531d0`.
+4. `docsource-master` doesn't change its reference to `repo_1` — it still remains at `0d06f18f0969ac55b9dcd937b6700fe1`.
+
+This means that `repo_1` is never updated on `docsource-master` unless I commit the new hash of `repo_1` `master` HEAD, which is currently `623faff40237f976aa153792585531d0`.
+We then know that we can make commits to `repo_1` without having to worry about breaking anything in `docsource-master` `master`, and vice-versa.
+
+This becomes important when maintaining stable builds that require resources from multiple independent repositories, as is the case with `docsource-master`.
+
+With an effective submodule system in place, we know that the relationship between the parent repository and children repository is always stable.
+
+Which brings us to the next benefit:
+
+=== Codebase stability
+
+Having a modular codebase means that writers can effectively isolate their work from other collaborators, so that no one blocks anyone else's work.
+
+We need to produce three sets of documentation for three different products. Because some features and documentation needs overlap, resources should be shared between the three sets of docs to keep information and assets single-sourced.
+
+Storytime:
+
+`docsource-master` started out as a single monolithic repository for ER, CR, and DR docs. We split out the projects for easier content distribution, and had `rsync` synchronise resources between the projects. As long as work was done in branches, we were able to isolate work enough to prevent merge conflicts and a scattered history. But at some point, the side navigation stopped working — none of the projects were able to render the side navigation in the HTML output.
+
+This resulted in two weeks spent trying to trace the commit that broke it — because we were still building the site, I may have made a change that broke it but didn't realise it until more changes have been merged to the `master` branch. We never found the commit — because we didn't break the side navigation. It was an update to Flare 2017r2 that broke the layout.
+
+But we weren't able to rule out changes to the layout as a probable cause for the breakage, which led to two weeks of pointless troubleshooting and much gnashing of teeth.
+
+Splitting out the projects into individual repositories makes sure that this never happens again. Any change to shared resources is tightly versioned and controlled from the `docsource-master` project. Anything breakage on an individual project is isolated to that project itself. If the problem is found on all projects, then it's either a toolchain issue, or a shared resource issue. Troubleshooting becomes a lot more straightforward, and the project becomes a lot more stable.
+
+=== Sane Git histories
+
+Splitting the repositories makes the project histories more readable.
+
+Instead of having to track a specific change to a minute component on a sprawling monolithic repository, we can search each project's history easily because it exists in its own repository.
+
+By splitting the repos the way we have, we know that all commits to shared resources and build notes can be found in `docsource-master`, and notes on individual issues can be found in the project submodules themselves. Specific commit notes become easier to find and read, instead of having to wade through notes from other projects.
+
+=== Sane codebase mental models
+
+They say that if you can't keep a mental model of your codebase in your head, then it's too complicated.
+
+Splitting the `docsource-master` project into submodules makes managing Flare's complex directory strutures more manageable, and easier to cache in meat-RAM.
+
+== Working with submodules
+
+=== Configure Git Submodule Visibility
+
+Before attempting anything, set up Git to be more submodule friendly:
+
+[source,bash,linenums]
+----
+# include a submodule status summary when you run 'git status'.
+git config --global status.submoduleSummary true
+
+# improve 'git diff' for submodules.
+git config --global diff.submodule log
+
+# makes sure that 'git fetch' will always grab submodule refs.
+git config --global fetch.recurseSubmodules on-demand
+----
+
+Add Submodule to Container Repo
+
+To add a submodule to the `docsource` repository:
+
+[source,bash,linenums]
+----
+git submodule add -b master <repository-remote-url>
+# we only want to sync the master branch of each submodule to the docsource repo
+----
+
+=== Update Submodule
+
+Submodules have to be updated individually. Do this by running in the parent repository root:
+
+[source,bash]
+----
+git pull && git submodule for each "git checkout master && git pull"
+----
+
+=== Submodule Metadata
+
+When you initialize a submodule in `docsource`, git will create a `.gitmodules` file that will contain config re: submodules. It will look like this:
+
+[source,linenums]
+----
+[submodule "cr-core"]
+  path = cr-core
+  url = ssh://repo-man.internal.groundlabs.com:7999/doc/cr-core.git
+  branch = master
+----
+
+In addition, git will add an entry to your `.git/config` file. For example:
+
+[source,linenums]
+----
+[core]
+  repositoryformatversion = 0
+  filemode = false
+  bare = false
+  logallrefupdates = true
+  symlinks = false
+  ignorecase = true
+[remote "origin"]
+  url = ssh://git@repo-man.internal.groundlabs.com:7999/doc/docsource-master.git
+  fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+  remote = origin
+  merge = refs/heads/master
+[branch "develop"]
+  remote = origin
+  merge = refs/heads/develop
+[submodule "cr-core"]
+  url = ssh://repo-man.internal.groundlabs.com:7999/doc/cr-core.git
+----
+
+=== Submodule Refs
+
+In `Git 1.7.8\^`, all submodule refs are stored in `.git/modules`. If a submodule were to be removed in a branch, it would persist in `.git/modules`, allowing the container repository to keep track of the submodule outside of the working directory.
+
+This means that to remove a submodule, in addition to removing its entries in `.gitmodules` and `.git/config`, you have to remove the refs in `.git/modules`.
+
+== Further Reading
+
+Most of this readme is derived from this fantastic article: Christophe Porteneuve, "Mastering Git submodules," published 9 Jan 2015. Available: https://medium.com/@porteneuve/mastering-git-submodules-34c65e940407
+
+* https://git-scm.com/docs/git-submodule
+* https://chrisjean.com/git-submodules-adding-using-removing-and-updating/
