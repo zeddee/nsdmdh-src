@@ -50,7 +50,7 @@ You can reach him at [zed@nsdmdh.com](mailto:zed@nsdmdh.com)
 * Co-ordinate with other business units (e.g. Customer Support, Marketing) to keep abreast of users' informational needs.
 * Built documentation team; established workflow and processes.
 * General product management for docs.
-* Site migration from [Atlassian Confluence](https://www.atlassian.com/software/confluence) to [MadCap Flare](https://www.madcapsoftware.com/products/flare/)
+* Site migration from [Atlassian Confluence](https://www.atlassian.com/software/confluence) to [MadCap Flare](https://www.madcapsoftware.com/products/flare/).
 
 **EU GDPR-related Research Project**
 
@@ -80,4 +80,4 @@ You can reach him at [zed@nsdmdh.com](mailto:zed@nsdmdh.com)
 
 "What _Time_ Got Wrong About _The Last of Us_", _Kill Screen_, published 8 Oct 2014, available: [https://killscreen.com/articles/what-time-got-wrong-about-last-us/](https://killscreen.com/articles/what-time-got-wrong-about-last-us/)
 
-Guest Lecturer, The Documentary Genre and Game Narratives ([presentation workbook](/pdfs/CS4026-Documentaries-Games-and-Narratives.pdf)), 18 Oct 2016.
+Guest Lecture, The Documentary Genre and Game Narratives ([presentation workbook](/pdfs/CS4026-Documentaries-Games-and-Narratives.pdf)), 18 Oct 2016.
