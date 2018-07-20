@@ -16,13 +16,36 @@ body {
 }
 body a {
   color: #0061ff;
-}
-body a:hover {
   text-decoration: none;
-  color: black;
-  -webkit-transition: all 2s;
+  -webkit-transition-duration: 250ms;
   /* Safari */
-  transition: all 2s;
+  transition-duration: 250ms;
+  transition-property: color;
+  position: relative;
+}
+body a:hover, body a:focus {
+  color: #0044b3;
+}
+body a:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  bottom: -1px;
+  left: 0;
+  height: 1px;
+  background: #0061ff;
+  visibility: none;
+  transition-duration: 250ms;
+  transition-property: width;
+  transition-time-function: ease-in;
+  -webkit-transition-duration: 250ms;
+  -webkit-transition-property: width;
+  -webkit-transition-time-function: ease-in;
+}
+body a:hover:after, body a:focus:after {
+  visibility: visible;
+  width: 100%;
+  background: #0044b3;
 }
 body a:visited {
   color: #003a99;
@@ -129,6 +152,20 @@ sup.footnote-ref a:hover {
 .vimeo-wrapper iframe {
   border: none;
   min-width: 100%;
+}
+
+@media print {
+  html {
+    font-size: 12pts;
+  }
+
+  body {
+    width: 90%;
+  }
+
+  nav.menu, footer {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
