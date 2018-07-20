@@ -2,84 +2,82 @@
 title: "About Zed"
 menu: "main"
 ---
+<style>
+.this-is-zed {
+width:10em;
+height:10em;
+border-radius:50%;
+-webkit-border-radius:50%;
+-moz-border-radius:50%;
+overflow:hidden;
+  transition-property:box-shadow;
+  transition-duration:300ms;
+  box-shadow: 0.3em 0.3em 1em hsla(0,100%,0%,.2);
+  -moz-box-shadow: 0.3em 0.3em 1em hsla(0,100%,0%,.2);
+  -webkit-box-shadow: 0.3em 0.3em 1em hsla(0,100%,0%,.2);
+}
+.this-is-zed:hover {
+  box-shadow: 0.3em 0.3em 1em hsla(0,100%,0%,.4);
+  -moz-box-shadow: 0.3em 0.3em 1em hsla(0,100%,0%,.4);
+  -webkit-box-shadow: 0.3em 0.3em 1em hsla(0,100%,0%,.4);
+}
+.this-is-zed>img{
+  width:100%;
+}
+</style>
+<div class="this-is-zed">
+<a href="mailto:zed@nsdmdh.com" alt="zed@nsdmdh.com"><img src="/img/zed.jpg" /></a>
+</div>
 
-Zed is a former educator. He now manages and writes technical content at a software firm.
+Zed is a former educator, and documentarian by nature (i.e. asks a lot of questions and writes stuff down).
 
-## Skills
+He happiest when building content systems and the teams that manage them.
 
-- **Writing**. I work with technical content, but have experience producing other content types.
-- **Developing instructional content**. Designed and delivered instructional material, having taught at a range of tertiary institutions and spent time writing software instructions. 
-- **Information architecture**. Informally trained. Learnt on the job and through years of having to communicate complex information to persons who are not domain experts.
-- **Autodidactism**. I've learned most of how to do my current job while on the job. The list of skills picked up while employed as a technical writer include: Docker (intermediate), JavaScript (basic), Python (basic), Security (basics).
+You can reach him at [zed@nsdmdh.com](mailto:zed@nsdmdh.com)
 
+## Projects
 
-## Work
+**Enterprise Recon Documentation**[(site)](https://docs.groundlabs.com/er)[(pdf)](/pdfs/ER-2.0.26-documentation.pdf)
 
-- Ground Labs Documentation. [https://docs.groundlabs.com/](https://docs.groundlabs.com/)
-- "What _Time_ Got Wrong About _The Last of Us_", _Kill Screen_, published 8 Oct 2014, available: [https://killscreen.com/articles/what-time-got-wrong-about-last-us/](https://killscreen.com/articles/what-time-got-wrong-about-last-us/)
-- More writing at [nsdmdh.com](nsdmdh.com)
-- Random code bits at [github.com/zeddee](https://github.com/zeddee)
+**Card Recon Documentation**[(site)](https://docs.groundlabs.com/cr)[(pdf)](/pdfs/CR-2.0.25-documentation.pdf)
 
-## Experience
+**Data Recon Documentation**[(site)](https://docs.groundlabs.com/dr)[(pdf)](/pdfs/DR-2.0.25-documentation.pdf)
 
-### Ground Labs 
+* Lead technical writer. Responsible for keeping documentation site up to date and identifying informational gaps.
+* Established beach-head for documentation.
+* Designed, developed, and maintain full documentation stack.
+* Work as an embedded member of the development team to produce and maintain product documentation.
+* Co-ordinate with other business units (e.g. Customer Support, Marketing) to keep abreast of users' informational needs.
+* Built documentation team; established workflow and processes.
+* General product management for docs.
+* Site migration from [Atlassian Confluence](https://www.atlassian.com/software/confluence) to [MadCap Flare](https://www.madcapsoftware.com/products/flare/)
 
-#### Technical Writer (Feb, 2016 – Present)
+**EU GDPR-related Research Project**
 
-- Manage and write technical content.
-- Develop and maintain technical writing toolset.
-- Manage the technical documentation team.
+* Project management.
+* Managed 20 freelancers gathering research from 28 EU countries.
+* Cataloged and documented research for developer use.
 
-I manage the technical documentation team at Ground Labs, where we develop and maintain various technical documents. The team's core responsibility is developing and maintaining end-user and developer-facing documentation for our the company's products. Because we are embedded in the engineering team, we work closely together with our developers and are part of the AGILE development cycle.
+**Course co-ordinator**: Web Design and Technologies (Jan 2015 – Dec 2015)
 
-#### Achievements
+* Wrote syllabus and conducted classes.
+* Pedagogy and test design.
+* Co-ordinated instructors.
 
-- **Developed end-user documentation** for three products from ground up.
-- **Develop and maintain documentation toolchains**.
-  - Confluence
-  - MadCap Flare 2017
-  - Sphinx (in development)
-- **Docs-as-code**. By shifting our documentation platform from Confluence to Flare, we were able to use Git to manage our content, and allow us to:
-  - Collaborate over Bitbucket within the documentation team and with developers.
-  - Set up an automated build toolchain for Flare.
-  - Strengthens the documentation team's legitimacy as a member of the engineering team.
-  - Future plans with Sphinx would move our entire editing and review workflow onto Bitbucket, allowing developers and other subject matter experts to review content on the platform they are already reviewing code on.
-- **Expanded documentation team**.
-  - We are always looking for new things to document, and ways to improve information flows in the company.
-  - In order to do that, we have to constantly expanding and finding force multipliers in the form of effective tools to scale the output of the documentation team as the company grows.
-- **Insert the documentation team into the feature design process**.
-  - The documentation team here serves as a useful litmus test for how user-friendly a feature is.
-  - As the feature is being designed, we have insight into what would make for complicated documentation, which usually indicates poor user experience.
-  - Being present at the feature design process allows us to help mitigate these issues.
-  - In addition, we would be able to scope out the amount of work — research and writing — required for the feature.
-- **Co-ordinated team of freelancers for research project**.
-  - Hired and co-ordinated 20 freelancers across the world for an internal research project,
-  - Collected, managed, and organised information collected from freelancers for use in development work.
+## Work Experience
 
-#### Peripheral responsibilities
+**Technical Writer**  at Ground Labs (Feb 2016 – Jul 2018)
 
-- **Informal knowledge management**. No formal knowledge management processes. The documentation team monitors and collects a large amount of information during our course of work, so we try and informally facilitate the communication, recording, and organisation of information as we encounter it.
-- **UI text**. We write UI text where needed.
-- **Feature Research**. Some features require a significant amount of research before development work can start. We provide research help where appropriate, and where we may be able to provide domain expertise.
+**Adjunct Instructor** at
 
-### Adjunct Instructor, Various Institutions
+* Singapore Polytechnic, _Theory of Design_ (Apr 2014 – Feb 2016)
+* NTU WKWSCI[^1], _Introduction to Film Studies_ (Aug 2013 – Dec 2013)
+* NTU WKWSCI, _Web Design and Technologies_ (Jan 2015 – Dec 2015)
 
-#### Institutions
+[^1]: Nanyang Technological University Wee Kim Wee School of Communication and Information
 
-- Interior Design, Singapore Polytechnic School of Design
-  - Adjunct Instructor, Theory of Design, Apr 2014 – Mar 2016
-- Wee Kim Wee School of Communication and Information, Nanyang Technological University
-  - Adjunct Lecturer, Introduction to Film Theory, Aug – Dec 2013
-  - Course Co-ordinator and Lecturer, Web Design and Technologies, Jan – Dec 2016
-  - Guest Lecturer, Game Narrative, 18 Oct 2016
+## Other Work
 
-As an adjunct instructor, I developed my own classroom materials and curriculum and delivered lectures and tutorials, across a range of topics. Because the courses that I teach tend towards the open-ended, I designed my classes to be exploratory, teaching students to develop questions rather than focusing on answers. 
+"What _Time_ Got Wrong About _The Last of Us_", _Kill Screen_, published 8 Oct 2014, available: [https://killscreen.com/articles/what-time-got-wrong-about-last-us/](https://killscreen.com/articles/what-time-got-wrong-about-last-us/)
 
-#### Core Responsibilities
-
-- Curriculum development
-- Classroom management
-- Pedagogical methods
-- Editorial (i.e. grading essays)
-- Test design
-
+Guest Lecturer, The Documentary Genre and Game Narratives ([presentation workbook](/pdfs/CS4026-Documentaries-Games-and-Narratives.pdf)), 18 Oct 2016.
