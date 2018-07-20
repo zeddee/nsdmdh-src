@@ -1,0 +1,54 @@
+---
+title: "Roll Your Own Middleman Search Lunrjs"
+date: 2018-06-13T11:32:28+08:00
+draft: true
+---
+:toc:
+:sectnums:
+:source-highlighter: coderay
+
+Middleman doesn't have native Javascript search neatly packed into its core package, unlike other site generators that are used for documentation like Sphinx or (dare I?) MadCap Flare.
+
+Instead, you'll have to roll your own search implementation.
+
+Here, I've picked lunrjs because of it's relatively straightforward implementation.
+
+== Create JSON index of your site
+
+Create a `contents.json.erb` file in your `source` folder.
+
+In it, you have to:
+
+. Grab all pages on your site using the `sitemap` object. This is a lot simpler than generating a navigation tree, because you don't need to know where in the page tree each page resides. Use: `pages = sitemap.resource.find_all { |p| p.source_file.match(/\.adoc/) }` to grab all members of the `sitemap.resource` object with the `.adoc` extension.
+. Create an `Array` to hold all the entries for your index. `entries = []`
+. Iterate through all the pages in the `sitemap.resource` object using the `each_with_index` method. // CHECK WHAT DOES THIS DO
+. For each page, create a hash that contains an `:id`, `:title`, `:url`, `:content`, and `:excerpt`.
+. Spade the hash into the `entries` array.
+. Render the `entries` array as JSON.
+
+[source,ruby,linenums]
+----
+<%
+pages = sitemap.resources.find_all { |p| p.source_file.match(/\.adoc/) }
+entries = []
+pages.each_with_index do |page, index|
+  entry = {
+    :id    => index,
+    :title => page.data.title,
+    :url   => page.url,
+    :content => page.render({:layout => false }).gsub(%r{</?[^>]+?>}, '' ),
+    # Using a dirty hack here. No way to return actual excerpts from search results with lunr,
+    # so just returning the first 240 chars after the first 100 chars
+    :excerpt => page.render({:layout => false }).gsub(
+      %r{</?[^>]+?>},'')[100,380]
+  }
+  entries << entry
+end
+%><%= entries.to_json %>
+----
+
+When your Middleman site builds, you'll have a `contents.json` file sitting at your site root.
+
+lunr.Index.load(JSON.parse(file)) doesn’t seem to work that well. It looks like we have to construct the index by parsing the JSON file and sending it straight to the lunr index.
+
+Then why did middleman-lunr create two indexes — content and default?

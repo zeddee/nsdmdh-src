@@ -7,11 +7,18 @@ $baseFontColor: #444;
 $baseURLColor: #0061ff;
 $baseLineHeight: 1.618em;
 $baseGrey: #eee;
+$codeGrey: rgba($baseGrey,0.5);
 
 @mixin allTransitions($transitionTime){
   // default transitions
   -webkit-transition-duration: $transitionTime; /* Safari */
   transition-duration: $transitionTime;
+}
+
+@mixin boxShadow($x:2px,$y:2px,$blur:2px,$shadowColor:$baseGrey){
+  box-shadow: $x $y $blur $shadowColor;
+  -webkit-box-shadow: $x $y $blur $shadowColor;
+  -moz-box-shadow: $x $y $blur $shadowColor;
 }
 
 html {
@@ -117,12 +124,12 @@ code {
   white-space: pre-wrap;
   white-space: -moz-pre-wrap;
   white-space: -o-pre-wrap;
-  background: $baseGrey;
+  background: $codeGrey;
   padding:0 0.3em;
   pre>&{
   display:block;
   overflow-x:scroll;
-  padding:0.5em;
+  //padding:0.5em;
 
   }
 }
@@ -157,11 +164,11 @@ sup.footnote-ref{
     }
     .section-contents--date {
       background:lighten($baseGrey,5);
-      font-size:0.9rem;
+      font-size:0.9em;
     }
     .section-contents--section {
       background:$baseGrey;
-      font-size:0.9rem;
+      font-size:0.9em;
     }
     .section-contents--item {
       width:auto;
@@ -170,12 +177,28 @@ sup.footnote-ref{
 }
 
 .highlight {
+  &.CodeRay code{
+    border-left:1px solid $baseGrey;
+    border-top:1px solid $baseGrey;
+    padding:1em;
+    background:$codeGrey;
+  }
+  &.CodeRay,&.CodeRay table {
+    font-size:1em;
+    border:none;
+    padding:0;
+    @include boxShadow();
+  }
+  &.CodeRay table{
+    margin:-1em;
+  }
+
   overflow-x:scroll;
   span,pre {
-    color:$baseGrey;
+    //color:$baseGrey;
   }
   border:none;
-  padding:1rem;
+  //padding:1rem;
 }
 
 .vimeo-wrapper {
