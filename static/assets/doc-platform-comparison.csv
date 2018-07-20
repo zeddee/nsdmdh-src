@@ -1,0 +1,7 @@
+Solution,Type,Platforms,WYSIWYG,XHTML,Markdown,Asciidoctor,reStructuredText,Onboarding,HTML Output,PDF Output,SEO,Editorial Workflow,SCM,Commenting
+Confluence,CMS,Java 8,Yes,No,Plugin,No,No,Zero training needed.,Dynamic,Plugin,Acceptable,Plugin,Proprietary,"Yes, but poor support."
+MadCap Flare,SSG,Windows,Yes,Yes,Plugin,No,No,2 day onboarding. Building custom template requires significant amount of time.,Yes,Native,Require major customization,"Proprietary, or PDF",Yes (with issues),Difficult
+Hugo,SSG,All,No,No,Native,Native,No,Highly customizable. Quick onboarding. Vibrant ecosystem.,Yes,No,https://keithpblog.org/post/hugo-website-seo/,Git,Git,Git
+Jekyll,SSG,Ruby,No,No,Native,Native,No,Highly customizable. Quick onboarding.,Yes,No,Requires customization,Git,Git,Git
+Middleman,SSG,Ruby,No,No,Native,Native,No,"Highly customizable. Quick onboarding. Advanced customization possible, but takes a lot of time. Ecosystem is out of date.",asciidoctor-pdf,Requires customization,Requires customization,Git,Git,Git
+GatsbyJS,SSG,NodeJS,No,No,Native,Native,No,"Highly customizable. Quick onboarding. React-based, which means inherits large ecosystem.",Yes,No,Yes,Git,Git,Git
