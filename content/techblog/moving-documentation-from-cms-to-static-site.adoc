@@ -1,10 +1,18 @@
 ---
-title: "Moving Documentation from CMS to a Static Site"
-date: 2018-06-07T21:13:30+08:00
+title: "Choosing Tools to Build Documentation with"
+date: 2018-07-20T16:53:35+08:00
 slug: moving-documentation-from-cms-to-static-site
 draft: true
 ---
 :toc:
+
+[.table-container]
+=====
+[%header, format=csv]
+|====
+include::/static/assets/doc-platform-comparison.csv[]
+|====
+=====
 
 Hosted our documentation on Confluence.
 
