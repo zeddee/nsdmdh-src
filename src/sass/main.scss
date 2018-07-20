@@ -10,8 +10,8 @@ $baseGrey: #eee;
 
 @mixin allTransitions($transitionTime){
   // default transitions
-  -webkit-transition: all $transitionTime; /* Safari */
-  transition: all $transitionTime;
+  -webkit-transition-duration: $transitionTime; /* Safari */
+  transition-duration: $transitionTime;
 }
 
 html {
@@ -30,11 +30,36 @@ body {
   // all links
   a {
     color:$baseURLColor;
-    &:hover {
-      text-decoration:none;
-      color:black;
-      @include allTransitions(2s);
+    text-decoration:none;
+    @include allTransitions(250ms);
+    transition-property: color;
+    position:relative;
+    &:hover, &:focus {
+      color:darken($baseURLColor,+15);
     }
+    &:after {
+      content:"";
+        position:absolute;
+        width:0;
+        bottom:-1px;
+        left:0;
+        height:1px;
+        background:$baseURLColor;
+        visibility:none;
+        //transform: scaleX(0);
+        transition-duration: 250ms;
+        transition-property:width;
+        transition-time-function: ease-in;
+        -webkit-transition-duration: 250ms;
+        -webkit-transition-property:width;
+        -webkit-transition-time-function: ease-in;
+      }
+      &:hover:after,&:focus:after{
+        visibility:visible;
+        //transform: scaleX(1);
+        width:100%;
+        background:darken($baseURLColor,+15);
+      }
     &:visited {
       color:darken($baseURLColor,20);
     }
@@ -159,5 +184,17 @@ sup.footnote-ref{
     min-width:100%;
     .video-wrapper{
     }
+  }
+}
+
+@media print {
+  html {
+    font-size:12pts;
+  }
+  body {
+    width:90%;
+  }
+  nav.menu,footer {
+    display: none;
   }
 }
