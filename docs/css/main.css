@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Inconsolata:400,700");
 @import url("https://fonts.googleapis.com/css?family=Oswald");
 html {
@@ -152,6 +153,30 @@ sup.footnote-ref a:hover {
 .vimeo-wrapper iframe {
   border: none;
   min-width: 100%;
+}
+
+footer {
+  width: 100%;
+  border-top: 1px solid #dddddd;
+  padding-top: 1em;
+  font-size: 0.95em;
+}
+
+div.sidebarblock {
+  font-style: italic;
+  font-weight: 700;
+  background: #fafafa;
+}
+div.sidebarblock:before {
+  content: "\“";
+  float: left;
+  clear: both;
+  font-size: 3em;
+  position: relative;
+  right: 0.2em;
+  color: #c4c4c4;
+  font-family: times,serif;
+  font-style: normal;
 }
 
 @media print {
