@@ -187,7 +187,30 @@ sup.footnote-ref{
   }
 }
 
+// == asciidoc classes
+
+// blockquote
+div.sidebarblock {
+  font-style:italic;
+  font-weight:700;
+  background:hsl(0,0%,98%);
+  &:before{
+    content:"\“";
+    float:left;
+    clear:both;
+    font-size:3em;
+    position:relative;
+    right:0.2em;
+    color:lighten($baseFontColor,50);
+    font-family:times,serif;
+    font-style:normal;
+  }
+}
+
+// == Print classes
+
 @media print {
+  // Remove navbar and footer for print media
   html {
     font-size:12pts;
   }
