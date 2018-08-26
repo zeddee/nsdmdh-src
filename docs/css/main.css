@@ -179,9 +179,38 @@ div.sidebarblock:before {
   font-style: normal;
 }
 
+.tableblock {
+  border-spacing: 0;
+  line-height: 1.21em;
+}
+.tableblock p {
+  margin: 0;
+  padding: 0;
+}
+.tableblock th, .tableblock td {
+  padding: 0.3em 1em 0 1em;
+  text-align: left;
+  vertical-align: top;
+}
+.tableblock th {
+  vertical-align: bottom;
+}
+.tableblock td {
+  border: 1px solid #eee;
+}
+.tableblock > thead {
+  background: #444;
+  color: #eee;
+}
+
+.table-container {
+  width: 90%;
+  overflow-x: scroll;
+}
+
 @media print {
   html {
-    font-size: 12pts;
+    font-size: 14pt;
   }
 
   body {
