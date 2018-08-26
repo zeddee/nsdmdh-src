@@ -37,7 +37,7 @@ You can reach him at [zed@nsdmdh.com](mailto:zed@nsdmdh.com)
 
 ## Published Work
 
-[**Ground Labs Documentation**](https://docs.groundlabs.com/er)[(pdf)](/pdfs/ER-2.0.26-documentation.pdf)
+[**Ground Labs Documentation**](https://docs.groundlabs.com/er)
 
 
 **MessageBird Developer Guides**:
