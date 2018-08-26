@@ -15,3 +15,7 @@ home = ["HTML"]
   image_path="/img/colours/cyan.png"
 [blackfriday]
   fencedCode=true
+
+[mediaTypes]
+  [mediaTypes."application/json"]
+  [mediaTypes."application/rss"]

@@ -35,6 +35,16 @@ He happiest when building content systems and the teams that manage them.
 
 You can reach him at [zed@nsdmdh.com](mailto:zed@nsdmdh.com)
 
+## Published Work
+
+[**Ground Labs Documentation**](https://docs.groundlabs.com/er)[(pdf)](/pdfs/ER-2.0.26-documentation.pdf)
+
+
+**MessageBird Developer Guides**:
+
+- [Two Factor Authentication (2FA) (Go/Golang)](https://developers.messagebird.com/guides/verify)
+- [SMS Order Notifications (Go/Golang)](https://developers.messagebird.com/guides/notifications)
+
 ## Projects
 
 **Enterprise Recon Documentation**[(site)](https://docs.groundlabs.com/er)[(pdf)](/pdfs/ER-2.0.26-documentation.pdf)

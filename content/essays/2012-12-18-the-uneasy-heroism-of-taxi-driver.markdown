@@ -31,7 +31,7 @@ Throughout the entire film, Bickle's values are consistently questioned at every
 
 Another thing that should strike the viewer is Bickle's complicity in the apparent amorality of the "scum". According to Bickle himself, his vehicle does not discriminate:
 
-"Someday a real rain will come and wash all this scum off the streets. I go all over. I take people to the Bronx, Brooklyn, I take 'em to Harlem. I don't care. Don't make no difference to me. It does to some. Some won't even take spooks. Don't make no difference to me."
+> Someday a real rain will come and wash all this scum off the streets. I go all over. I take people to the Bronx, Brooklyn, I take 'em to Harlem. I don't care. Don't make no difference to me. It does to some. Some won't even take spooks. Don't make no difference to me.
 
 His moral ambiguity is most apparent when the film switches from Bickle's attempted assassination of Senator Palantine to the shootout at Sport's apartment, leaving all its occupants dead except for Iris and Bickle (although Roger Ebert[^xiv] proposes an alternative reading of the film where the final scene is the wish-fulfillment dream of a dying Travis Bickle). To him, both are variations on a theme[^xv], where he is the agent that enacts cleansing.
 
