@@ -31,7 +31,7 @@ overflow:hidden;
 
 Zed is a former educator, and documentarian by nature (i.e. asks a lot of questions and writes stuff down).
 
-He happiest when building content systems and the teams that manage them.
+He's happiest when building content systems and the teams that manage them.
 
 You can reach him at [zed@nsdmdh.com](mailto:zed@nsdmdh.com)
 
