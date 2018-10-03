@@ -39,11 +39,16 @@ You can reach him at [zed@nsdmdh.com](mailto:zed@nsdmdh.com)
 
 [**Ground Labs Documentation**](https://docs.groundlabs.com/er)
 
+- Samples:
+  - [Ground Labs Documentation: ER2 — Exchange Domain Scanning](https://docs.groundlabs.com/er2.0.26/Content/Targets/Add_Targets/Cloud_Targets/Exchange_Domain.htm)
+  - [Ground Labs Documentation: ER2 — Database Scanning](https://docs.groundlabs.com/er2.0.26/Content/Targets/Add_Targets/Server_Targets/Databases.htm)
+
 
 **MessageBird Developer Guides**:
 
-- [Two Factor Authentication (2FA) (Go/Golang)](https://developers.messagebird.com/guides/verify)
+- [SMS Appointment Reminders (Go/Golang)](https://developers.messagebird.com/guides/reminders)
 - [SMS Order Notifications (Go/Golang)](https://developers.messagebird.com/guides/notifications)
+- [SMS Marketing Subscriptions (Go/Golang)](https://developers.messagebird.com/guides/subscriptions)
 
 ## Projects
 
