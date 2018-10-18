@@ -45,9 +45,8 @@ You can reach him at [zed@nsdmdh.com](mailto:zed@nsdmdh.com)
 
 **MessageBird Developer Guides** (samples):
 
-- [SMS Appointment Reminders (Go/Golang)](https://developers.messagebird.com/guides/reminders)
-- [SMS Order Notifications (Go/Golang)](https://developers.messagebird.com/guides/notifications)
-- [SMS Marketing Subscriptions (Go/Golang)](https://developers.messagebird.com/guides/subscriptions)
+- [Number Masking Guide (Go/Golang)](https://github.com/messagebirdguides/masked-numbers-guide-go)
+- [SMS Marketing Subscriptions (Go/Golang)](https://github.com/messagebirdguides/subscriptions-guide-go)
 
 ## Projects
 
@@ -80,7 +79,9 @@ You can reach him at [zed@nsdmdh.com](mailto:zed@nsdmdh.com)
 
 ## Work Experience
 
-**Technical Writer**  at Ground Labs (Feb 2016 – Jul 2018)
+**Technical Writing Consultant** since Jul 2018
+
+**Technical Writer** at Ground Labs (Feb 2016 – Jul 2018)
 
 **Adjunct Instructor** at
 
