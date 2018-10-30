@@ -2,4 +2,4 @@
 title: "home"
 ---
 
-zed rambles [here](/essays).
+[we've moved](https://shootbird.work)
