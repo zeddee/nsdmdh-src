@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{ partial "head.html" . }}
+        <title>{{ .Title }}</title>
+    </head>
+    <body>
+        <div class="section" id="splash">
+        {{ partial "header.html" . }}
+        <br/>
+        <br/>
+            {{ if .Site.Params.mainMenu }}
+                {{ range .Site.Params.mainMenu }}
+                    <div class="big-link">
+                        <a href="{{.link}}">
+                            {{.text}}
+                        </a>
+                    </div>
+                {{ end }}
+
+            {{ else }}
+                {{ range .Site.Sections }}
+                    <div class="big-link"> 
+                        <a href="{{.Permalink}}">
+                            {{.Title}}
+                        </a>
+                    </div>
+                {{ end }}
+            {{ end }}
+            <br/>
+            <br/>
+          
+        <section class="footer">
+        {{ partial "footer.html" . }}
+        </section>
+        </div>
+    </body>
+</html>

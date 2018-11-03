@@ -2,18 +2,16 @@ baseurl                 = "/"               # Your domain name. Must end with "/
 languageCode            = "en-us"
 defaultContentLanguage  = "en"
 isMultilingual          = false
-title                   = "NSDMDH"
+title                   = "Call me Sam"
 theme                   = "sam"
 pygmentsStyle           = "monokai"                     # https://help.farbox.com/pygments.html
 pygmentsCodefences      = true
 # googleAnalytics         = ""             # Tracking code, eg. "UA-111111111-1"
 
-publishDir = "docs"
-
 [params]
     dateform            = "Mon Jan 02, 2006"
     dateformfull        = "Mon Jan 2 2006 15:04:05 EST"
-    favicon             = "favicon.png"
+    favicon             = "sam.ico"
     homepage            = "main"                        # What to call the home page link
     galleryFolder       = "images/"                     # Where you've put your images, after "/content/gallery/"
     clickablePhotos     = false                          # Allow links to the full size images
@@ -21,32 +19,21 @@ publishDir = "docs"
                                                          # Note: This will only become active if clickablePhotos is also true.
     smallImagesSubfolder = "small/"                      # The subfolder for the small versions of the images under the gallery (with trailing slash)
                                                          # For each image the small version has to have the same filename as the big version.
-    footerText          = "©2018 [zed](https://www.zeddee.com/)."
-  profileImage      = "/zed-square-400px.jpg"
-  postFooterText      = """
-  **Author |** Zed is a former educator and currently a
-  [professional explainer](https://www.zeddee.com/cv).
-  He writes about software, video games, and narrative design.
-  If you have software or a system that needs explaining
-  (to frustrated users, or you just need someone to write
-  stuff down for you), you can contact him for work at
-  [zed@nsdmdh.com](mailto://zed@nsdmdh.com).
-  """
+    footerText          = "Call me Sam, a theme for Hugo."
 
 # Metadata
-    description         = "Never Say Doesn't Mean Don't Have"            # Max 160 characters show in search results
+    description         = "A new Hugo site."            # Max 160 characters show in search results
     twitterCard         = "summary_large_image"         # Card value “summary”, “summary_large_image”, “app”, or “player”
-    primaryImage        = "/img/logo/shootbird_opengraph.png"                     # Image that shows on Twitter cards and OpenGraph links
-    headerImage         = "/img/logo/shootbird_logo_beak.png"
-
-
-[[params.mainTitle]]
-  title = "NSDMDH"
+    primaryImage        = "tn.png"                     # Image that shows on Twitter cards and OpenGraph links
 
 [[params.mainMenu]]
-    link = "https://www.shootbird.work"
-    text = "We've moved to: Shoot Bird"
+    link = "/posts"
+    text = "posts"
 
 [[params.mainMenu]]
-    link = "https://www.zeddee.com"
-    text = "@zed"
+    link = "/gallery"
+    text = "gallery"
+
+[[params.mainMenu]]
+    link = "/about"
+    text = "who is sam?"
